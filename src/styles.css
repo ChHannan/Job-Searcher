@@ -1,7 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600,700);
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,600,700);
-
 a, p {
   color: #707c88
 }
@@ -1773,7 +1769,7 @@ input[type=checkbox]:focus, input[type=file]:focus, input[type=radio]:focus {
 }
 
 nav.navbar.bootsnav ul.nav > li > a {
-  color: #fff;
+  color: #000;
   text-transform: uppercase;
   background-color: transparent !important
 }
@@ -1847,12 +1843,7 @@ ul.cart-list > li.total > .btn {
   padding: 10px 15px
 }
 
-nav.navbar.bootsnav {
-  background-color: #35434E;
-  border-bottom: 1px solid #35434E
-}
-
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   body nav.navbar.bootsnav ul.nav > li > a.signin {
     background: #11b719 !important
   }
@@ -7513,7 +7504,7 @@ ul.social-share li > a.be-share {
   -webkit-box-shadow: 0 5px 25px 0 rgba(0, 103, 255, .15)
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   body nav.navbar.bootsnav ul.nav > li > a.signin {
     color: #fff !important;
     border-radius: 2px;
@@ -7792,7 +7783,7 @@ ul.social-share li > a.be-share {
   }
 
   nav.navbar.bootsnav.navbar-transparent.white {
-    background-color: transparent;
+    background-color: #fff;
     border-bottom: none
   }
 
@@ -8132,10 +8123,6 @@ ul.social-share li > a.be-share {
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075)
   }
 
-  nav.navbar.bootsnav .navbar-collapse {
-    background-color: #35434E;
-    border-bottom: 1px solid #35434E
-  }
 
   nav.bootsnav .megamenu-content .title {
     font-size: 17px
@@ -8422,102 +8409,6 @@ ul#styleOptions li {
   list-style: none;
   display: inline-block;
   margin: 5px
-}
-
-a.cl-box {
-  width: 50px;
-  height: 50px;
-  border-radius: 5px;
-  display: block;
-  margin: 0 auto
-}
-
-a.cl-box.blue {
-  background: #0084ff
-}
-
-a.cl-box.red {
-  background: #dd2027
-}
-
-a.cl-box.purple {
-  background: #aa68fc
-}
-
-a.cl-box.dark-red {
-  background: #de185a
-}
-
-a.cl-box.green {
-  background: #07b107
-}
-
-a.cl-box.orange {
-  background: #ec5525
-}
-
-a.cl-box.sea-blue {
-  background: #02b9b5
-}
-
-a.cl-box.pink {
-  background: #ff569c
-}
-
-.spin {
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-duration: 1s;
-  -moz-transition-property: -moz-transform;
-  -moz-transition-duration: 1s;
-  -o-transition-property: transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
-  -webkit-animation-name: rotate;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-name: rotate;
-  -moz-animation-duration: 2s;
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-timing-function: linear;
-  animation-name: rotate;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  position: absolute;
-  top: 12px;
-  left: 15px
-}
-
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotate(0)
-  }
-  to {
-    -webkit-transform: rotate(360deg)
-  }
-}
-
-@-moz-keyframes rotate {
-  from {
-    -moz-transform: rotate(0)
-  }
-  to {
-    -moz-transform: rotate(360deg)
-  }
-}
-
-@keyframes rotate {
-  from {
-    -webkit-transform: rotate(0);
-    transform: rotate(0)
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg)
-  }
 }
 
 .easy-autocomplete .form-control, .easy-autocomplete .input-group .form-control {

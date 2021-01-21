@@ -5,7 +5,10 @@ import {PageNotFoundComponent} from 'src/app/page-not-found/page-not-found.compo
 
 const routes: Routes = [
   {
-    path: '',
+    path: '', redirectTo: 'auth', pathMatch: 'full'
+  },
+  {
+    path: 'create-job',
     loadChildren: () => import('./create-job-module/create-job.module').then(m => m.CreateJobModule)
   },
   {
