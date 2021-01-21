@@ -25,6 +25,10 @@ const routes: Routes = [
     loadChildren: () => import('./company-profile-module/company-profile.module').then(m => m.CompanyProfileModule)
   },
   {
+    path: 'job-detail',
+    loadChildren: () => import('./job-detail-module/job-detail.module').then((m => m.JobDetailModule))
+  },
+  {
     path: '**', component: PageNotFoundComponent
   }
 ];
