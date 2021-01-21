@@ -21,6 +21,10 @@ const routes: Routes = [
     loadChildren: () => import('./companies-module/companies.module').then(m => m.CompaniesModule)
   },
   {
+    path: 'company-profile',
+    loadChildren: () => import('./company-profile-module/company-profile.module').then(m => m.CompanyProfileModule)
+  },
+  {
     path: '**', component: PageNotFoundComponent
   }
 ];
