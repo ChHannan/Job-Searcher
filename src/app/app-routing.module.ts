@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {PageNotFoundComponent} from 'src/app/page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,9 @@ const routes: Routes = [
   {
     path: 'companies',
     loadChildren: () => import('./companies-module/companies.module').then(m => m.CompaniesModule)
+  },
+  {
+    path: '**', component: PageNotFoundComponent
   }
 ];
 
