@@ -1,8 +1,3 @@
-.detail-desc {
-  margin: 15px;
-}
-
-.white-shadow {
-  /*margin: 30px;*/
-  padding: 15px;
+.input-group {
+  min-width: 100% !important  ;
 }
