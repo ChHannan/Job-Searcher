@@ -5,7 +5,11 @@ import {RouterModule, Routes} from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('src/app/job-module/job.module').then(m => m.JobModule)
+    loadChildren: () => import('./job-module/job.module').then(m => m.JobModule)
+  },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   }
 ];
 

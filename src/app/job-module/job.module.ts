@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {CreateJobComponent} from 'src/app/create-job-page/create-job.component';
 
 import { JobRoutingModule } from './job-routing.module';
-import {CreateJobComponent} from '../create-job/create-job.component';
 
 
 @NgModule({
