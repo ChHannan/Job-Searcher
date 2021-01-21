@@ -3176,7 +3176,7 @@ ul.footer-navigation li {
   opacity: .6
 }
 
-.inner-header-title.blank:before, .inner-header-title.blank:brfore, .inner-header-title.gray-bg:before {
+.inner-header-title.blank:before, .inner-header-title.blank:before, .inner-header-title.gray-bg:before {
   opacity: 0
 }
 
