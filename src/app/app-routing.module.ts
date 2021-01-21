@@ -32,12 +32,16 @@ const routes: Routes = [
     loadChildren: () => import('./candidate-profile-module/candidate-profile.module').then(m => m.CandidateProfileModule)
   },
   {
+    path: 'employer-profile',
+    loadChildren: () => import('./employer-profile-module/employer-profile.module').then(m => m.EmployerProfileModule)
+  },
+  {
     path: 'job-detail',
     loadChildren: () => import('./job-detail-module/job-detail.module').then((m => m.JobDetailModule))
   },
   {
-    path: 'employer-profile',
-    loadChildren: () => import('./employer-profile-module/employer-profile.module').then(m => m.EmployerProfileModule)
+    path: 'apply-job',
+    loadChildren: () => import('./apply-job-module/apply-job.module').then(m => m.ApplyJobModule)
   },
   {
     path: '**', component: PageNotFoundComponent
