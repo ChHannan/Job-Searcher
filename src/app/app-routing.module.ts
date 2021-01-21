@@ -5,11 +5,15 @@ import {RouterModule, Routes} from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./job-module/job.module').then(m => m.JobModule)
+    loadChildren: () => import('./create-job-module/create-job.module').then(m => m.CreateJobModule)
   },
   {
     path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+    loadChildren: () => import('./auth-module/auth.module').then(m => m.AuthModule)
+  },
+  {
+    path: 'jobs',
+    loadChildren: () => import('./jobs-module/jobs.module').then(m => m.JobsModule)
   }
 ];
 

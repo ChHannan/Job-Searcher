@@ -69,10 +69,6 @@ p {
 a, a:active, a:focus, a:hover {
   outline: 0;
   text-decoration: none;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out
 }
 

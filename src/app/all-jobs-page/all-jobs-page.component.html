@@ -1,0 +1,45 @@
+<div class="wrapper">
+
+  <section class="inner-header-title" style="background-image:url(assets/banner-10.jpg);">
+    <div class="container">
+      <h1>Browse Jobs</h1>
+    </div>
+  </section>
+  <div class="clearfix"></div>
+
+  <section class="brows-job-category">
+    <div class="container">
+      <!-- Company Searrch Filter Start -->
+      <div class="row extra-mrg">
+        <div class="wrap-search-filter">
+          <form>
+            <div class="col-md-4 col-sm-4">
+              <input type="text" class="form-control" placeholder="Keyword: Name, Tag">
+            </div>
+            <div class="col-md-3 col-sm-3">
+              <input type="text" class="form-control" placeholder="Location: City, State, Zip">
+            </div>
+            <div class="col-md-3 col-sm-3">
+              <select class="selectpicker form-control" multiple title="All Categories">
+                <option>Information Technology</option>
+                <option>Mechanical</option>
+                <option>Hardware</option>
+              </select>
+
+            </div>
+            <div class="col-md-2 col-sm-2">
+              <button type="submit" class="btn btn-success full-width">Filter</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row extra-mrg">
+        <ng-container *ngFor="let i of [].constructor(10)">
+          <div class="col-md-4 col-sm-6">
+            <app-job-box></app-job-box>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </section>
+</div>

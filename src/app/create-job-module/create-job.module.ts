@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {CreateJobComponent} from 'src/app/create-job-page/create-job.component';
 
-import { JobRoutingModule } from './job-routing.module';
+import { CreateJobRoutingModule } from './create-job-routing.module';
 
 
 @NgModule({
@@ -11,7 +11,7 @@ import { JobRoutingModule } from './job-routing.module';
   ],
   imports: [
     CommonModule,
-    JobRoutingModule
+    CreateJobRoutingModule
   ]
 })
-export class JobModule { }
+export class CreateJobModule { }
