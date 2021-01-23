@@ -1,5 +1,4 @@
 export interface CreateJob {
-  id: string;
   jobName: string;
   jobType: string;
   location: string;
@@ -61,4 +60,10 @@ export interface User {
   about?: string;
   jobsApplied?: string; // For candidate
   jobsPosted?: string; // For employer
+}
+
+export interface ApplyJob {
+  estimatedSalary: string;
+  coverLetter: string;
+  extraInfo: string;
 }
