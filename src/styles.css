@@ -7805,10 +7805,6 @@ ul.social-share li > a.be-share {
     border-left: solid 1px #555
   }
 
-  nav.navbar.bootsnav.navbar-transparent.white .attr-nav > ul > li > a, nav.navbar.bootsnav.navbar-transparent.white ul.nav > li > a, nav.navbar.bootsnav.no-background.white .attr-nav > ul > li > a, nav.navbar.bootsnav.no-background.white ul.nav > li > a {
-    color: rgba(255, 255, 255, 1)
-  }
-
   nav.navbar.bootsnav.navbar-light.no-background.white .attr-nav > ul > li > a, nav.navbar.bootsnav.navbar-light.no-background.white ul.nav > li > a, nav.navbar.bootsnav.navbar-light.white .attr-nav > ul > li > a, nav.navbar.bootsnav.navbar-light.white ul.nav > li > a {
     color: #657582
   }

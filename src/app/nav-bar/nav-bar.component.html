@@ -10,9 +10,17 @@
       </a>
     </div>
     <div class="navbar-collapse" id="navbar-menu" [ngClass]="{'collapse': collapsed}">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="left-br"><a class="signin" routerLink="/auth/login">Sign In Now</a></li>
-      </ul>
+      <ng-template #signInButton>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="left-br"><a class="signin" routerLink="/auth/login">Sign In Now</a></li>
+        </ul>
+      </ng-template>
+      <ng-container *ngIf="isLoggedIn; else signInButton">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a>View Jobs</a></li>
+          <li><a>Logout</a></li>
+        </ul>
+      </ng-container>
     </div>
   </div>
 </nav>
