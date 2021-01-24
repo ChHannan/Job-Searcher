@@ -1,8 +1,17 @@
 export interface User {
-  id: string;
+  id?: string;
+  name: string;
+  email: string;
+  type: string;
+  about?: string;
+  api_token: string;
+  // jobsApplied?: string; // For candidate
+  // jobsPosted?: string; // For employer
+}
+
+export interface CreateUser {
   username: string;
   email: string;
-  about?: string;
-  jobsApplied?: string; // For candidate
-  jobsPosted?: string; // For employer
+  password: string;
+  type: string;
 }

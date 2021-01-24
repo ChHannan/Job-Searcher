@@ -9,16 +9,16 @@
             </div>
             <div class="panel-body">
               <img src="assets/logo.png" class="img-responsive" />
-              <form role="form">
+              <form role="form" [formGroup]="singInForm">
                 <fieldset>
                   <div class="form-group">
-                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                    <input class="form-control" placeholder="E-mail" type="email" autofocus formControlName="email">
                   </div>
                   <div class="form-group">
-                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                    <input class="form-control" placeholder="Password" type="password" formControlName="password">
                   </div>
                   <div class="padd-10"></div>
-                  <a class="btn btn-login">Sign In</a>
+                  <a class="btn btn-login" (click)="signInUser()">Sign In</a>
                 </fieldset>
               </form>
             </div>
