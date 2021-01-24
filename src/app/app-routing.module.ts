@@ -6,7 +6,11 @@ import {ContactPageComponent} from './contact-page/contact-page.component';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'auth', pathMatch: 'full'
+    path: '', redirectTo: 'home', pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    loadChildren: () => import ('./landing-module/landing-module.module').then(m => m.LandingModuleModule)
   },
   {
     path: 'create-job',
@@ -43,10 +47,6 @@ const routes: Routes = [
   {
     path: 'apply-job',
     loadChildren: () => import('./apply-job-module/apply-job.module').then(m => m.ApplyJobModule)
-  },
-  {
-    path: 'home',
-    loadChildren: () => import ('./landing-module/landing-module.module').then(m => m.LandingModuleModule)
   },
   {
     path: 'create-company',

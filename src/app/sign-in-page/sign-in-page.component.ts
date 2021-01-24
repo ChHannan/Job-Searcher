@@ -20,8 +20,6 @@ export class SignInPageComponent implements OnInit {
   }
 
   signInUser(): void {
-    this.authService.login(this.singInForm.value).subscribe(data => {
-      console.log(data);
-    });
+    this.authService.login(this.singInForm.value).subscribe();
   }
 }

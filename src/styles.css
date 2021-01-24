@@ -2149,6 +2149,9 @@ a.btn.btn-banner {
   color: #fff
 }
 
+.cursor{
+  cursor: pointer;
+}
 .banner.home-5 {
   background-size: cover;
   padding-top: 13%;

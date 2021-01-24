@@ -22,9 +22,6 @@ export class SignUpPageComponent implements OnInit {
   }
 
   createUser(): void {
-    console.log(this.signUpForm.value);
-    this.authService.signUp(this.signUpForm.value).subscribe(data => {
-      console.log(data);
-    });
+    this.authService.signUp(this.signUpForm.value);
   }
 }
