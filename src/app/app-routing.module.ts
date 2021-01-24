@@ -44,6 +44,10 @@ const routes: Routes = [
     loadChildren: () => import('./apply-job-module/apply-job.module').then(m => m.ApplyJobModule)
   },
   {
+    path: 'home',
+    loadChildren: () => import ('./landing-module/landing-module.module').then(m => m.LandingModuleModule)
+  },
+  {
     path: '**', component: PageNotFoundComponent
   }
 ];

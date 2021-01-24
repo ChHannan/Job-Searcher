@@ -6,6 +6,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {ApplyJobPageComponent} from './apply-job-page/apply-job-page.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 @NgModule({
