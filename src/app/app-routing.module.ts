@@ -52,6 +52,10 @@ const routes: Routes = [
     loadChildren: () => import('./create-company-module/create-company.module').then(m => m.CreateCompanyModule)
   },
   {
+    path: 'manage-resume',
+    loadChildren: () => import('./manage-resume-module/manage-resume.module').then(m => m.ManageResumeModule)
+  },
+  {
     path: '**', component: PageNotFoundComponent
   }
 ];
