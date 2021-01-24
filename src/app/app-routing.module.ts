@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {PageNotFoundComponent} from 'src/app/page-not-found/page-not-found.component';
+import {ContactPageComponent} from './contact-page/contact-page.component';
 
 
 const routes: Routes = [
@@ -42,6 +43,21 @@ const routes: Routes = [
   {
     path: 'apply-job',
     loadChildren: () => import('./apply-job-module/apply-job.module').then(m => m.ApplyJobModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import ('./landing-module/landing-module.module').then(m => m.LandingModuleModule)
+  },
+  {
+    path: 'create-company',
+    loadChildren: () => import('./create-company-module/create-company.module').then(m => m.CreateCompanyModule)
+  },
+  {
+    path: 'manage-resume',
+    loadChildren: () => import('./manage-resume-module/manage-resume.module').then(m => m.ManageResumeModule)
+  },
+  {
+    path: 'contact', component: ContactPageComponent
   },
   {
     path: '**', component: PageNotFoundComponent
