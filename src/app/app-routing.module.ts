@@ -48,6 +48,10 @@ const routes: Routes = [
     loadChildren: () => import ('./landing-module/landing-module.module').then(m => m.LandingModuleModule)
   },
   {
+    path: 'create-company',
+    loadChildren: () => import('./create-company-module/create-company.module').then(m => m.CreateCompanyModule)
+  },
+  {
     path: '**', component: PageNotFoundComponent
   }
 ];

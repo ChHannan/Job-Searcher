@@ -7,6 +7,7 @@ import {AppComponent} from './app.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {ApplyJobPageComponent} from './apply-job-page/apply-job-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { CreateCompanyPageComponent } from './create-company-page/create-company-page.component';
 
 
 @NgModule({
