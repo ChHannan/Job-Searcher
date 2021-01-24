@@ -7,7 +7,7 @@ import {CompanyService} from 'src/app/services/company.service';
 @Injectable({
   providedIn: 'root'
 })
-export class CompanyResolverService implements Resolve<Company> {
+export class SingleCompanyResolverService implements Resolve<Company> {
   constructor(private companyService: CompanyService) { }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Company> | Promise<Company> | Company {

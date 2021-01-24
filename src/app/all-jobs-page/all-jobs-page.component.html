@@ -31,9 +31,9 @@
         </div>
       </div>
       <div class="row extra-mrg">
-        <ng-container *ngFor="let i of [].constructor(10)">
+        <ng-container *ngFor="let job of jobs">
           <div class="col-md-4 col-sm-6">
-            <app-job-box></app-job-box>
+            <app-job-box [job]="job"></app-job-box>
           </div>
         </ng-container>
       </div>

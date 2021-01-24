@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 import {Company} from 'src/app/models/company';
 import {CompanyService} from 'src/app/services/company.service';
 
@@ -10,11 +11,11 @@ import {CompanyService} from 'src/app/services/company.service';
 export class AllCompaniesPageComponent implements OnInit {
   companies: Company[];
 
-  constructor(private companyService: CompanyService) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.companyService.getAllCompanies().subscribe((companies) => {
-      this.companies = companies;
+    this.route.data.subscribe((data) => {
+      this.companies = data.companies;
     });
   }
 

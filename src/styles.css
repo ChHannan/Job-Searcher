@@ -3396,11 +3396,11 @@ span.job-num {
   margin-right: 20px
 }
 
-.brows-job-position p .brows-job-sallery {
+.brows-job-position p .brows-job-salary {
   margin-right: 0
 }
 
-.brows-job-position p .brows-job-sallery i {
+.brows-job-position p .brows-job-salary i {
   margin-right: 10px
 }
 
@@ -3438,7 +3438,7 @@ span.job-num {
   background: #f6931e
 }
 
-.enternship {
+.internship {
   background: #d20001
 }
 
@@ -5680,7 +5680,10 @@ button.btn.btn-login {
   margin: 0 auto;
   vertical-align: middle;
   display: inline-block;
-  max-width: 50px;
+  max-width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
   line-height: 50px
 }
 
@@ -5735,7 +5738,7 @@ button.btn.btn-login {
   margin-right: 0
 }
 
-.grid-view-caption .brows-job-location p, .grid-view-caption .brows-job-sallery {
+.grid-view-caption .brows-job-location p, .grid-view-caption .brows-job-salary {
   font-size: 14px;
   margin-bottom: 0
 }

@@ -8,11 +8,19 @@ import {environment} from 'src/environments/environment';
   providedIn: 'root'
 })
 export class JobService {
-  private createJobUrl = `${environment.baseUrl}`;
+  private jobUrl = `${environment.baseUrl}job`;
 
   constructor(private httpClient: HttpClient) { }
 
+  getAllJobs(): Observable<Job[]> {
+    return this.httpClient.get<Job[]>(this.jobUrl);
+  }
+
+  getJobById(id): Observable<Job> {
+    return this.httpClient.get<Job>(`${this.jobUrl}/${id}`);
+  }
+
   postJob(job: Job): Observable<any> {
-    return this.httpClient.post(this.createJobUrl, job);
+    return this.httpClient.post(this.jobUrl, job);
   }
 }

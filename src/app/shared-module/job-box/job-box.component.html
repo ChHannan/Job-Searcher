@@ -1,0 +1,22 @@
+<div class="grid-view brows-job-list cursor" (click)="navigate()">
+  <div class="brows-job-company-img">
+    <img src="{{job.company.logo}}" class="img-responsive" alt="Logo" />
+  </div>
+  <div class="brows-job-position">
+    <h3><a>{{job.title}}</a></h3>
+    <p><span>{{job.company.name}}</span></p>
+  </div>
+  <div class="brows-job-type">
+    <span [ngClass]="jobTypeClass">{{job.type}}</span>
+  </div>
+  <ul class="grid-view-caption">
+    <li>
+      <div class="brows-job-location">
+        <p><i class="fa fa-map-marker"></i>{{job.location}}</p>
+      </div>
+    </li>
+    <li>
+      <p><span class="brows-job-salary"><i class="fa fa-money"></i>${{job.salary}}</span></p>
+    </li>
+  </ul>
+</div>

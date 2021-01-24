@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavBarComponent } from './nav-bar.component';
+import { CompanyBoxComponent } from 'src/app/shared-module/company-box/company-box.component';
 
-describe('NavBarComponent', () => {
-  let component: NavBarComponent;
-  let fixture: ComponentFixture<NavBarComponent>;
+describe('CompanyBoxComponent', () => {
+  let component: CompanyBoxComponent;
+  let fixture: ComponentFixture<CompanyBoxComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavBarComponent ]
+      declarations: [ CompanyBoxComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NavBarComponent);
+    fixture = TestBed.createComponent(CompanyBoxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

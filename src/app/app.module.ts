@@ -8,7 +8,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {ContactPageComponent} from './contact-page/contact-page.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
-import {SharedModule} from './shared-module/shared.module';
 
 
 @NgModule({
@@ -21,12 +20,12 @@ import {SharedModule} from './shared-module/shared.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    SharedModule,
     LoadingBarHttpClientModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS, useClass: AuthenticationInterceptorService, multi: true
-  },],
+  },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

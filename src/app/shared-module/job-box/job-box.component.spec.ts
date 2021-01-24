@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JobBoxComponent } from './job-box.component';
+import { JobBoxComponent } from 'src/app/shared-module/job-box/job-box.component';
 
 describe('JobBoxComponent', () => {
   let component: JobBoxComponent;
