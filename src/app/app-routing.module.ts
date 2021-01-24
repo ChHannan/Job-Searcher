@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {PageNotFoundComponent} from 'src/app/page-not-found/page-not-found.component';
+import {CompanyResolverService} from 'src/app/services/company-resolver.service';
 import {ContactPageComponent} from './contact-page/contact-page.component';
 
 
@@ -29,8 +30,9 @@ const routes: Routes = [
     loadChildren: () => import('./companies-module/companies.module').then(m => m.CompaniesModule)
   },
   {
-    path: 'company-profile',
-    loadChildren: () => import('./company-profile-module/company-profile.module').then(m => m.CompanyProfileModule)
+    path: 'company-profile/:id',
+    loadChildren: () => import('./company-profile-module/company-profile.module').then(m => m.CompanyProfileModule),
+    resolve: {company: CompanyResolverService}
   },
   {
     path: 'candidate-profile',

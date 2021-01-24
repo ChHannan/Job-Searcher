@@ -1,13 +1,16 @@
+import {User} from 'src/app/models/user';
+
 export interface Company {
-  id: string;
-  companyName: string;
-  companyCategory: string;
-  companyDescription: string;
-  emailAddress: string;
+  id?: string;
+  name: string;
+  category: string;
+  description: string;
+  email: string;
   location: string;
-  phoneNumber: string;
+  phone: string;
   website: string;
-  companyLogo: string;
-  noOfEmployees: string;
-  aboutCompany: string;
+  logo: string;
+  employee_count: string;
+  about: string;
+  user?: User;
 }

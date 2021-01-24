@@ -1,25 +1,25 @@
-<div class="item-click">
+<div class="cursor" (click)="navigate()">
   <article>
     <div class="brows-company">
       <div class="col-md-2 col-sm-2">
         <div class="brows-company-pic">
-          <a ><img src="assets/com-2.jpg" class="img-responsive" alt="" /></a>
+          <a ><img src="{{company.logo}}" class="img-responsive" alt="Logo" /></a>
         </div>
       </div>
       <div class="col-md-4 col-sm-4">
         <div class="brows-company-name">
-          <a><h4>Google</h4></a>
-          <span class="brows-company-tagline">Software Company</span>
+          <a><h4>{{company.name}}</h4></a>
+          <span class="brows-company-tagline">{{company.category}}</span>
         </div>
       </div>
       <div class="col-md-4 col-sm-4">
         <div class="brows-company-location">
-          <p><i class="fa fa-map-marker"></i> Street #210, Make New London</p>
+          <p><i class="fa fa-map-marker"></i>{{' ' +company.location}}</p>
         </div>
       </div>
       <div class="col-md-2 col-sm-2">
         <div class="brows-company-position">
-          <p>6 Opening</p>
+          <p>{{company.employee_count}} Employees</p>
         </div>
       </div>
     </div>

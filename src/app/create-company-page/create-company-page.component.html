@@ -4,109 +4,84 @@
   </div>
 </section>
 <div class="clearfix"></div>
-
-<div class="detail-desc section">
-  <div class="container white-shadow">
-
-    <div class="row bottom-mrg top-container">
-      <form class="add-feild">
-
-        <div class="col-md-6 col-sm-6">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Company Name">
+<form [formGroup]="companyForm">
+  <div class="detail-desc section">
+    <div class="container white-shadow">
+      <div class="row bottom-mrg top-container">
+        <form class="add-feild">
+          <div class="col-md-6 col-sm-6">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Company Name" formControlName="name">
+            </div>
           </div>
-        </div>
-
-        <div class="col-md-6 col-sm-6">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Company Tagline">
+          <div class="col-md-6 col-sm-6">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Company Category" formControlName="category">
+            </div>
           </div>
-        </div>
-
-        <div class="col-md-6 col-sm-6">
-          <div class="input-group">
-            <select class="form-control input-lg">
-              <option>All Categories</option>
-              <option>Software</option>
-              <option>Hardware</option>
-              <option>Machanical</option>
-              <option>HR/Manager</option>
-            </select>
+          <div class="col-md-12 col-sm-12">
+            <textarea class="form-control" placeholder="Company Description" formControlName="description"></textarea>
           </div>
-        </div>
-        <div class="col-md-6 col-sm-6">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Company CEO Name">
-          </div>
-        </div>
-        <div class="col-md-12 col-sm-12">
-          <textarea class="form-control" placeholder="Company Description"></textarea>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   </div>
-</div>
-
-<section class="full-detail">
-  <div class="container">
-    <div class="row bottom-mrg extra-mrg">
-      <form>
-        <h2 class="detail-title">Work Experience</h2>
-        <div class="col-md-6 col-sm-6">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-            <input type="text" class="form-control" placeholder="Email Address">
+  <section class="full-detail">
+    <div class="container">
+      <div class="row bottom-mrg extra-mrg">
+        <form>
+          <h2 class="detail-title">Work Experience</h2>
+          <div class="col-md-6 col-sm-6">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+              <input type="text" class="form-control" placeholder="Email Address" formControlName="email">
+            </div>
           </div>
-        </div>
-
-        <div class="col-md-6 col-sm-6">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-            <input type="text" class="form-control" placeholder="Phone Number">
+          <div class="col-md-6 col-sm-6">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+              <input type="text" class="form-control" placeholder="Phone Number" formControlName="phone">
+            </div>
           </div>
-        </div>
-
-        <div class="col-md-6 col-sm-6">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-globe"></i></span>
-            <input type="text" class="form-control" placeholder="Website Address">
+          <div class="col-md-6 col-sm-6">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-globe"></i></span>
+              <input type="text" class="form-control" placeholder="Website Address" formControlName="website">
+            </div>
           </div>
-        </div>
-
-        <div class="col-md-6 col-sm-6">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
-            <input type="text" class="form-control" placeholder="Local E.g. It Park New">
+          <div class="col-md-6 col-sm-6">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+              <input type="text" class="form-control" placeholder="Location" formControlName="location">
+            </div>
           </div>
-        </div>
-
-        <div class="col-md-6 col-sm-6">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-birthday-cake"></i></span>
-            <input type="text" id="company-dob" data-lang="en" data-large-mode="true" data-min-year="2017" data-max-year="2020" data-disabled-days="08/17/2017,08/18/2017" data-id="datedropper-0" data-theme="my-style" class="form-control" readonly="">
+          <div class="col-md-6 col-sm-6">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-link"></i></span>
+              <input type="url" class="form-control" placeholder="Logo Url" formControlName="logo">
+            </div>
           </div>
-        </div>
-
-        <div class="col-md-6 col-sm-6">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-users"></i></span>
-            <input type="text" class="form-control" placeholder="Employee E.g. 100-2500">
+          <div class="col-md-6 col-sm-6">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-users"></i></span>
+              <input type="text" class="form-control" placeholder="Employee E.g. 100" formControlName="employee_count">
+            </div>
           </div>
-        </div>
-
-      </form>
+        </form>
+      </div>
+      <div class="row bottom-mrg extra-mrg">
+        <form>
+          <h2 class="detail-title">About Company</h2>
+          <div class="col-md-12 col-sm-12">
+            <textarea class="form-control textarea" placeholder="About Company" formControlName="about"></textarea>
+          </div>
+          <div class="col-md-12 col-sm-12">
+            <button class="btn btn-success btn-primary small-btn" (click)="createCompany()" type="button">Submit your
+              company
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-
-    <div class="row bottom-mrg extra-mrg">
-      <form>
-        <h2 class="detail-title">About Company</h2>
-        <div class="col-md-12 col-sm-12">
-          <textarea class="form-control textarea" placeholder="About Company"></textarea>
-        </div>
-        <div class="col-md-12 col-sm-12">
-          <button class="btn btn-success btn-primary small-btn">Submit your company</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
+  </section>
+</form>

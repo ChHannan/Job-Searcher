@@ -7,7 +7,7 @@ import {environment} from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class CreateJobService {
+export class JobService {
   private createJobUrl = `${environment.baseUrl}`;
 
   constructor(private httpClient: HttpClient) { }

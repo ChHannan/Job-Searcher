@@ -10,30 +10,26 @@
   <div class="container white-shadow">
     <div class="row">
       <div class="detail-pic">
-        <img src="assets/com-1.jpg" class="img" alt="">
-        <a href="#" class="detail-edit" title="edit" ><i class="fa fa-pencil"></i></a>
-      </div>
-      <div class="detail-status">
-        <span>10 Days Ago</span>
+        <img src="{{company.logo}}" class="img" alt="Logo">
       </div>
     </div>
     <div class="row bottom-mrg">
       <div class="col-md-8 col-sm-8">
         <div class="detail-desc-caption">
-          <h4>Microsoft</h4>
-          <span class="designation">Software Development Company</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h4>{{company.name}}</h4>
+          <span class="designation">{{company.category}}</span>
+          <p>{{company.description}}</p>
         </div>
       </div>
       <div class="col-md-4 col-sm-4">
         <div class="get-touch">
           <h4>Get in Touch</h4>
           <ul>
-            <li><i class="fa fa-map-marker"></i><span>Menlo Park, CA</span></li>
-            <li><i class="fa fa-envelope"></i><span>danieldax704@gmail.com</span></li>
-            <li><i class="fa fa-globe"></i><span>microft.com</span></li>
-            <li><i class="fa fa-phone"></i><span>0 123 456 7859</span></li>
-            <li><i class="fa fa-users"></i><span>1000 -1200</span></li>
+            <li><i class="fa fa-map-marker"></i><span>{{company.location}}</span></li>
+            <li><i class="fa fa-envelope"></i><span>{{company.email}}</span></li>
+            <li><i class="fa fa-globe"></i><span>{{company.website}}</span></li>
+            <li><i class="fa fa-phone"></i><span>{{company.phone}}</span></li>
+            <li><i class="fa fa-users"></i><span>{{company.employee_count}}</span></li>
           </ul>
         </div>
       </div>
@@ -44,40 +40,7 @@
   <div class="container">
     <div class="row row-bottom">
       <h2 class="detail-title">About Company</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="row row-bottom">
-      <h2 class="detail-title">Company Requirement</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <ul class="detail-list">
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur.</li>
-      </ul>
-    </div>
-    <div class="row row-bottom">
-      <h2 class="detail-title">Company Policy</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <ul class="detail-list">
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur.</li>
-      </ul>
+      <p>{{company.about}}</p>
     </div>
   </div>
 </section>

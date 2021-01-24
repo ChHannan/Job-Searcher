@@ -3268,7 +3268,8 @@ ul.footer-navigation li {
   width: 120px;
   height: 120px;
   margin: auto;
-  border-radius: 50%
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 a.detail-edit {
@@ -3491,7 +3492,8 @@ span.job-num {
 .brows-company .brows-company-pic img {
   width: 80px;
   height: 80px;
-  margin: 0 auto
+  margin: 0 auto;
+  object-fit: cover;
 }
 
 .brows-company .brows-company-location p, .brows-company h4 {
