@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {Job} from 'src/app/models/job';
 
 @Component({
@@ -10,12 +10,16 @@ import {Job} from 'src/app/models/job';
 export class JobDetailPageComponent implements OnInit {
   job: Job;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.data.subscribe(data => {
       this.job = data.job;
     });
+  }
+
+  navigate(): void {
+    this.router.navigate(['/apply-job']).then();
   }
 
 }
