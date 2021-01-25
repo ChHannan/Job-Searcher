@@ -1,6 +1,6 @@
-<div class="wrapper">
+
 <app-nav-bar></app-nav-bar>
-<section class="inner-header-title" style="background-image:url('assets/banner-10.jpg');">
+<section class="inner-header-title" style="background-image:url('assets/banner.jpg');">
   <div class="container">
     <h1>Company Detail</h1>
   </div>
@@ -44,16 +44,16 @@
     </div>
   </div>
 </section>
-  <section class="full-detail-description full-detail">
-    <div class="container">
-      <div class="row row-bottom">
-        <h2 class="detail-title">Jobs</h2>
-        <ng-container *ngFor="let job of jobs">
-          <div class="col-md-4 col-sm-6">
-            <app-job-box [job]="job"></app-job-box>
-          </div>
-        </ng-container>
-      </div>
+<section class="full-detail-description full-detail">
+  <div class="container">
+    <div class="row row-bottom">
+      <h2 class="detail-title">Jobs</h2>
+      <ng-container *ngFor="let job of jobs">
+        <div class="col-md-4 col-sm-6">
+          <app-job-box [job]="job"></app-job-box>
+        </div>
+      </ng-container>
     </div>
-  </section>
-</div>
+  </div>
+</section>
+<app-footer></app-footer>

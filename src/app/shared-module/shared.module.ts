@@ -4,18 +4,21 @@ import {RouterModule} from '@angular/router';
 import {CompanyBoxComponent} from 'src/app/shared-module/company-box/company-box.component';
 import {JobBoxComponent} from 'src/app/shared-module/job-box/job-box.component';
 import {NavBarComponent} from 'src/app/shared-module/nav-bar/nav-bar.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
   declarations: [
     NavBarComponent,
     CompanyBoxComponent,
-    JobBoxComponent
+    JobBoxComponent,
+    FooterComponent
   ],
   exports: [
     NavBarComponent,
     CompanyBoxComponent,
-    JobBoxComponent
+    JobBoxComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
