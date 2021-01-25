@@ -68,7 +68,7 @@ const routes: Routes = [
     loadChildren: () => import('./manage-resume-module/manage-resume.module').then(m => m.ManageResumeModule)
   },
   {
-    path: 'contact', component: ContactPageComponent
+    path: 'contactus', component: ContactPageComponent
   },
   {
     path: '**', component: PageNotFoundComponent

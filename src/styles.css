@@ -4143,6 +4143,9 @@ span.job-num {
 .detail-pannel-footer-btn a.footer-btn.blu-btn {
   background: #03a9f4
 }
+.detail-pannel-footer-btn a.footer-btn.red-btn {
+  background: #dd2027
+}
 
 .detail-pannel-footer-btn a:focus, .detail-pannel-footer-btn a:hover {
   text-decoration: none;

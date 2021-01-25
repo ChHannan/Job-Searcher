@@ -3,6 +3,7 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {LoadingBarHttpClientModule} from '@ngx-loading-bar/http-client';
 import {AuthenticationInterceptorService} from 'src/app/services/authentication-interceptor.service';
+import {SharedModule} from 'src/app/shared-module/shared.module';
 import {AppRoutingModule} from './app-routing.module';
 
 import {AppComponent} from './app.component';
@@ -21,6 +22,7 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
     AppRoutingModule,
     HttpClientModule,
     LoadingBarHttpClientModule,
+    SharedModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS, useClass: AuthenticationInterceptorService, multi: true

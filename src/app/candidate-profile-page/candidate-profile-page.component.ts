@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-candidate-profile-page',
@@ -6,16 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./candidate-profile-page.component.css']
 })
 export class CandidateProfilePageComponent implements OnInit {
-
   currentTab = 'about';
-
-  changeCurrentTab(newTab): void {
-    this.currentTab = newTab;
-  }
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  changeCurrentTab(newTab): void {
+    this.currentTab = newTab;
+  }
 }
