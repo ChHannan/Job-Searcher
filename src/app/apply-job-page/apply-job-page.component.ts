@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
+import {ActivatedRoute} from '@angular/router';
 import {JobApplicationService} from 'src/app/services/job-application.service';
 
 @Component({
@@ -9,10 +10,12 @@ import {JobApplicationService} from 'src/app/services/job-application.service';
 })
 export class ApplyJobPageComponent implements OnInit {
   jobApplicationForm: FormGroup;
+  jobId: string;
 
-  constructor(private jobApplicationService: JobApplicationService) {}
+  constructor(private jobApplicationService: JobApplicationService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
+    this.jobId = this.route.snapshot.params.id;
     this.jobApplicationForm = new FormGroup({
       experience: new FormControl(''),
       salary: new FormControl(''),
@@ -22,12 +25,8 @@ export class ApplyJobPageComponent implements OnInit {
   }
 
   createJobApplication(): void {
-    console.log(this.jobApplicationForm.value);
-    this.jobApplicationService.postJobApplication(this.jobApplicationForm.value).subscribe(data => {
-      console.log(data);
-    });
+    this.jobApplicationForm.value.job_id = this.jobId;
+    this.jobApplicationService.postJobApplication(this.jobApplicationForm.value).subscribe();
   }
 
 }
-
-// "Experienced in developing apps with react and angular."

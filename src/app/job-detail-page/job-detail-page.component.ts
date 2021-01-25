@@ -19,7 +19,7 @@ export class JobDetailPageComponent implements OnInit {
   }
 
   navigate(): void {
-    this.router.navigate(['/apply-job']).then();
+    this.router.navigate(['/apply-job', this.job.id]).then();
   }
 
 }

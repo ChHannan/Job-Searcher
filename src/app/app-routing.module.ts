@@ -56,7 +56,7 @@ const routes: Routes = [
     }
   },
   {
-    path: 'apply-job',
+    path: 'apply-job/:id',
     loadChildren: () => import('./apply-job-module/apply-job.module').then(m => m.ApplyJobModule)
   },
   {

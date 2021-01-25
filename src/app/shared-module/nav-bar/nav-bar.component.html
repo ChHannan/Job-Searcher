@@ -5,22 +5,15 @@
       <i class="fa fa-bars"></i>
     </button>
     <div class="navbar-header">
-      <a class="navbar-brand"><img src="../../../assets/logo-white.png" class="logo logo-display" alt="">
-        <img src="../../../assets/logo-white.png" class="logo logo-scrolled" alt="">
+      <a class="navbar-brand"><img src="assets/logo-white.png" class="logo logo-display" alt="">
+        <img src="assets/logo-white.png" class="logo logo-scrolled" alt="">
       </a>
     </div>
     <div class="navbar-collapse" id="navbar-menu" [ngClass]="{'collapse': collapsed}">
-      <ng-template #signInButton>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="left-br"><a class="signin" routerLink="/auth/login">Sign In Now</a></li>
-        </ul>
-      </ng-template>
-      <ng-container *ngIf="isLoggedIn; else signInButton">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a class="cursor">View Jobs</a></li>
-          <li><a (click)="logoutUser()" class="cursor">Logout</a></li>
-        </ul>
-      </ng-container>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="left-br"><a class="signin cursor" (click)="navigate()">{{isLoggedIn ? 'View Profile' : 'Sign In Now'}}</a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
