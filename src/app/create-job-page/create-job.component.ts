@@ -34,7 +34,6 @@ export class CreateJobComponent implements OnInit {
   }
 
   createJob(): void {
-    console.log(this.jobForm.value);
     this.jobService.postJob(this.jobForm.value).subscribe(data => {
       console.log(data);
     });

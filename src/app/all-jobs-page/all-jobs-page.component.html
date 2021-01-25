@@ -10,22 +10,24 @@
     <div class="container">
       <div class="row extra-mrg">
         <div class="wrap-search-filter">
-          <form>
+          <form [formGroup]="searchJobFormGroup">
             <div class="col-md-4 col-sm-4">
-              <input type="text" class="form-control" placeholder="Keyword: Name, Tag">
+              <input type="text" class="form-control" placeholder="Search for job" formControlName="title"
+                     [value]="searchJobFormGroup.controls.title.value">
             </div>
             <div class="col-md-3 col-sm-3">
-              <input type="text" class="form-control" placeholder="Location: City, State, Zip">
-            </div>
-            <div class="col-md-3 col-sm-3">
-              <select class="selectpicker form-control" multiple title="All Categories">
-                <option>Information Technology</option>
-                <option>Mechanical</option>
-                <option>Hardware</option>
+              <select class="form-control input-lg" formControlName="type">
+                <option>All</option>
+                <option>Full Time</option>
+                <option>Part Time</option>
+                <option>Internship</option>
+                <option>Contract</option>
               </select>
             </div>
+            <div class="col-md-3 col-sm-3">
+            </div>
             <div class="col-md-2 col-sm-2">
-              <button type="submit" class="btn btn-success full-width">Filter</button>
+              <button type="submit" class="btn btn-success full-width" (click)="searchJob()">Search</button>
             </div>
           </form>
         </div>
