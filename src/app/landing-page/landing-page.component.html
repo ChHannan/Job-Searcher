@@ -33,121 +33,6 @@
     </form>
   </div>
 </section>
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="main-heading">
-        <h2>Browse Jobs By <span>Category</span></h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3 col-sm-6">
-        <div class="category-box" data-aos="fade-up">
-          <div class="category-desc">
-            <div class="category-icon"><i class="icon-bargraph" aria-hidden="true"></i><i
-              class="icon-bargraph abs-icon" aria-hidden="true"></i></div>
-            <div class="category-detail category-desc-text">
-              <h4><a href="browse-jobs-grid.html">Accounting & Finance</a></h4>
-
-              <p>122 Jobs</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="category-box" data-aos="fade-up">
-          <div class="category-desc">
-            <div class="category-icon"><i class="icon-tools-2" aria-hidden="true"></i><i
-              class="icon-tools-2 abs-icon" aria-hidden="true"></i></div>
-            <div class="category-detail category-desc-text">
-              <h4><a href="browse-jobs-grid.html">Automotive Jobs</a></h4>
-
-              <p>155 Jobs</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="category-box" data-aos="fade-up">
-          <div class="category-desc">
-            <div class="category-icon"><i class="icon-briefcase" aria-hidden="true"></i><i
-              class="icon-briefcase abs-icon" aria-hidden="true"></i></div>
-            <div class="category-detail category-desc-text">
-              <h4><a href="browse-jobs-grid.html">Business</a></h4>
-
-              <p>300 Jobs</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="category-box" data-aos="fade-up">
-          <div class="category-desc">
-            <div class="category-icon"><i class="icon-edit" aria-hidden="true"></i><i
-              class="icon-edit abs-icon" aria-hidden="true"></i></div>
-            <div class="category-detail category-desc-text">
-              <h4><a href="browse-jobs-grid.html">Education Training</a></h4>
-
-              <p>80 Jobs</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="category-box" data-aos="fade-up">
-          <div class="category-desc">
-            <div class="category-icon"><i class="icon-heart" aria-hidden="true"></i><i
-              class="icon-heart abs-icon" aria-hidden="true"></i></div>
-            <div class="category-detail category-desc-text">
-              <h4><a href="browse-jobs-grid.html">Healthcare</a></h4>
-
-              <p>120 Jobs</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="category-box" data-aos="fade-up">
-          <div class="category-desc">
-            <div class="category-icon"><i class="icon-wine" aria-hidden="true"></i><i
-              class="icon-wine abs-icon" aria-hidden="true"></i></div>
-            <div class="category-detail category-desc-text">
-              <h4><a href="browse-jobs-grid.html">Restaurant & Food</a></h4>
-
-              <p>78 Jobs</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="category-box" data-aos="fade-up">
-          <div class="category-desc">
-            <div class="category-icon"><i class="icon-map" aria-hidden="true"></i><i
-              class="icon-map abs-icon" aria-hidden="true"></i></div>
-            <div class="category-detail category-desc-text">
-              <h4><a href="browse-jobs-grid.html">Transportation</a></h4>
-
-              <p>90 Jobs</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="category-box" data-aos="fade-up">
-          <div class="category-desc">
-            <div class="category-icon"><i class="icon-desktop" aria-hidden="true"></i><i
-              class="icon-desktop abs-icon" aria-hidden="true"></i></div>
-            <div class="category-detail category-desc-text">
-              <h4><a href="browse-jobs-grid.html">Telecommunications</a></h4>
-
-              <p>210 Jobs</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <section class="wp-process">
   <div class="container">
     <div class="row">
@@ -160,85 +45,15 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4 col-sm-4">
-        <div class="popular-jobs-container">
-          <div class="popular-jobs-box">
-            <span class="popular-jobs-status bg-success">hourly</span>
-            <h4 class="flc-rate">$17/hr</h4>
-
-            <div class="popular-jobs-box">
-              <div class="popular-jobs-box-detail">
-                <h4>Google Inc</h4>
-                <span class="desination">Software Designer</span>
-              </div>
-            </div>
-            <div class="popular-jobs-box-extra">
-              <ul>
-                <li>Php</li>
-                <li>Android</li>
-                <li>Html</li>
-                <li class="more-skill bg-primary">+3</li>
-              </ul>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui.</p>
-            </div>
-          </div>
-          <a href="#" class="btn btn-popular-jobs bt-1">View Detail</a>
+      <ng-container *ngFor="let job of jobs">
+        <div class="col-md-4 col-sm-4">
+          <app-job-box [job]="job"></app-job-box>
         </div>
-      </div>
-      <div class="col-md-4 col-sm-4">
-        <div class="popular-jobs-container">
-          <div class="popular-jobs-box">
-            <span class="popular-jobs-status bg-warning">Monthly</span>
-            <h4 class="flc-rate">$570/Mo</h4>
-
-            <div class="popular-jobs-box">
-              <div class="popular-jobs-box-detail">
-                <h4>Duff Beer</h4>
-                <span class="desination">Marketting</span>
-              </div>
-            </div>
-            <div class="popular-jobs-box-extra">
-              <ul>
-                <li>Php</li>
-                <li>Android</li>
-                <li>Html</li>
-                <li class="more-skill bg-primary">+3</li>
-              </ul>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui.</p>
-            </div>
-          </div>
-          <a href="#" class="btn btn-popular-jobs bt-1">View Detail</a>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-4">
-        <div class="popular-jobs-container">
-          <div class="popular-jobs-box">
-            <span class="popular-jobs-status bg-info">Weekly</span>
-            <h4 class="flc-rate">$200/We</h4>
-
-            <div class="popular-jobs-box">
-              <div class="popular-jobs-box-detail">
-                <h4>Cyberdyne Systems</h4>
-                <span class="desination">Human Resource</span>
-              </div>
-            </div>
-            <div class="popular-jobs-box-extra">
-              <ul>
-                <li>Php</li>
-                <li>Android</li>
-                <li>Html</li>
-                <li class="more-skill bg-primary">+3</li>
-              </ul>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui.</p>
-            </div>
-          </div>
-          <a href="#" class="btn btn-popular-jobs bt-1">View Detail</a>
-        </div>
-      </div>
+      </ng-container>
     </div>
     <div class="row">
       <div class="col-md-12 col-sm-12">
-        <div class="text-center"><a href="freelancing-jobs.html" class="btn btn-primary">Load More</a></div>
+        <div class="text-center"><a routerLink="../jobs" class="btn btn-primary">Browse jobs</a></div>
       </div>
     </div>
   </div>
@@ -248,9 +63,9 @@
   <div class="container">
     <div class="row">
       <div class="main-heading">
-        <p>What Say Our Client</p>
+        <p>XLancer</p>
 
-        <h2>Our Success <span>Stories</span></h2>
+        <h2>Leading you to <span>Success</span></h2>
       </div>
     </div>
     <div class="row">
@@ -311,226 +126,21 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2>We found 477 matches jobs, you are watching 7 to 27</h2>
+        <h2>Browse companies empowered by XLancer Platform</h2>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
-        <div class="item-click">
-          <article>
-            <div class="brows-job-list">
-              <div class="col-md-1 col-sm-2 small-padding">
-                <div class="brows-job-company-img"><a href="job-detail.html"><img
-                  src="assets/com-1.jpg" class="img-responsive" alt=""/></a></div>
-              </div>
-              <div class="col-md-6 col-sm-5">
-                <div class="brows-job-position">
-                  <a href="job-detail.html">
-                    <h3>Digital Marketing Manager</h3>
-                  </a>
-
-                  <p><span>Autodesk</span><span class="brows-job-salary"><i
-                    class="fa fa-money"></i>$750 - 800</span><span
-                    class="job-type cl-success bg-trans-success">Full Time</span></p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-3">
-                <div class="brows-job-location">
-                  <p><i class="fa fa-map-marker"></i>QBL Park, C40</p>
-                </div>
-              </div>
-              <div class="col-md-2 col-sm-2">
-                <div class="brows-job-link"><a href="job-detail.html" class="btn btn-default">Apply
-                  Job</a></div>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="item-click">
-          <article>
-            <div class="brows-job-list">
-              <div class="col-md-1 col-sm-2 small-padding">
-                <div class="brows-job-company-img"><a href="job-detail.html"><img
-                  src="assets/com-2.jpg" class="img-responsive" alt=""/></a></div>
-              </div>
-              <div class="col-md-6 col-sm-5">
-                <div class="brows-job-position">
-                  <a href="job-detail.html">
-                    <h3>Compensation Analyst</h3>
-                  </a>
-
-                  <p><span>Google</span><span class="brows-job-salary"><i
-                    class="fa fa-money"></i>$810 - 900</span><span
-                    class="job-type bg-trans-warning cl-warning">Part Time</span></p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-3">
-                <div class="brows-job-location">
-                  <p><i class="fa fa-map-marker"></i>QBL Park, C40</p>
-                </div>
-              </div>
-              <div class="col-md-2 col-sm-2">
-                <div class="brows-job-link"><a href="job-detail.html" class="btn btn-default">Apply
-                  Job</a></div>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="item-click">
-          <article>
-            <div class="brows-job-list">
-              <div class="col-md-1 col-sm-2 small-padding">
-                <div class="brows-job-company-img"><a href="job-detail.html"><img
-                  src="assets/com-3.jpg" class="img-responsive" alt=""/></a></div>
-              </div>
-              <div class="col-md-6 col-sm-5">
-                <div class="brows-job-position">
-                  <a href="job-detail.html">
-                    <h3>Investment Banker</h3>
-                  </a>
-
-                  <p><span>Honda</span><span class="brows-job-salary"><i class="fa fa-money"></i>$800 - 910</span><span
-                    class="job-type bg-trans-primary cl-primary">Freelancer</span></p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-3">
-                <div class="brows-job-location">
-                  <p><i class="fa fa-map-marker"></i>QBL Park, C40</p>
-                </div>
-              </div>
-              <div class="col-md-2 col-sm-2">
-                <div class="brows-job-link"><a href="job-detail.html" class="btn btn-default">Apply
-                  Job</a></div>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="item-click">
-          <article>
-            <div class="brows-job-list">
-              <div class="col-md-1 col-sm-2 small-padding">
-                <div class="brows-job-company-img"><a href="job-detail.html"><img
-                  src="assets/com-4.jpg" class="img-responsive" alt=""/></a></div>
-              </div>
-              <div class="col-md-6 col-sm-5">
-                <div class="brows-job-position">
-                  <a href="job-detail.html">
-                    <h3>Financial Analyst</h3>
-                  </a>
-
-                  <p><span>Microsoft</span><span class="brows-job-salary"><i
-                    class="fa fa-money"></i>$580 - 600</span><span
-                    class="job-type bg-trans-success cl-success">Full Time</span></p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-3">
-                <div class="brows-job-location">
-                  <p><i class="fa fa-map-marker"></i>QBL Park, C40</p>
-                </div>
-              </div>
-              <div class="col-md-2 col-sm-2">
-                <div class="brows-job-link"><a href="job-detail.html" class="btn btn-default">Apply
-                  Job</a></div>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="item-click">
-          <article>
-            <div class="brows-job-list">
-              <div class="col-md-1 col-sm-2 small-padding">
-                <div class="brows-job-company-img"><a href="job-detail.html"><img
-                  src="assets/com-5.jpg" class="img-responsive" alt=""/></a></div>
-              </div>
-              <div class="col-md-6 col-sm-5">
-                <div class="brows-job-position">
-                  <a href="job-detail.html">
-                    <h3>Service Representative</h3>
-                  </a>
-
-                  <p><span>Autodesk</span><span class="brows-job-salary"><i
-                    class="fa fa-money"></i>$800 - 900</span><span
-                    class="job-type bg-trans-denger cl-danger">Enternship</span></p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-3">
-                <div class="brows-job-location">
-                  <p><i class="fa fa-map-marker"></i>QBL Park, C40</p>
-                </div>
-              </div>
-              <div class="col-md-2 col-sm-2">
-                <div class="brows-job-link"><a href="job-detail.html" class="btn btn-default">Apply
-                  Job</a></div>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="item-click">
-          <article>
-            <div class="brows-job-list">
-              <div class="col-md-1 col-sm-2 small-padding">
-                <div class="brows-job-company-img"><a href="job-detail.html"><img
-                  src="assets/com-6.jpg" class="img-responsive" alt=""/></a></div>
-              </div>
-              <div class="col-md-6 col-sm-5">
-                <div class="brows-job-position">
-                  <a href="job-detail.html">
-                    <h3>Chief Executive Officer</h3>
-                  </a>
-
-                  <p><span>Google</span><span class="brows-job-salary"><i
-                    class="fa fa-money"></i>$510 - 700</span><span
-                    class="job-type bg-trans-success cl-success">Full Time</span></p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-3">
-                <div class="brows-job-location">
-                  <p><i class="fa fa-map-marker"></i>QBL Park, C40</p>
-                </div>
-              </div>
-              <div class="col-md-2 col-sm-2">
-                <div class="brows-job-link"><a href="job-detail.html" class="btn btn-default">Apply
-                  Job</a></div>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="item-click">
-          <article>
-            <div class="brows-job-list">
-              <div class="col-md-1 col-sm-2 small-padding">
-                <div class="brows-job-company-img"><a href="job-detail.html"><img
-                  src="assets/com-7.jpg" class="img-responsive" alt=""/></a></div>
-              </div>
-              <div class="col-md-6 col-sm-5">
-                <div class="brows-job-position">
-                  <a href="job-detail.html">
-                    <h3>Administrative Manager</h3>
-                  </a>
-
-                  <p><span>Honda</span><span class="brows-job-salary"><i class="fa fa-money"></i>$700 - 800</span><span
-                    class="job-type bg-trans-warning cl-warning">Part Time</span></p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-3">
-                <div class="brows-job-location">
-                  <p><i class="fa fa-map-marker"></i>QBL Park, C40</p>
-                </div>
-              </div>
-              <div class="col-md-2 col-sm-2">
-                <div class="brows-job-link"><a href="job-detail.html" class="btn btn-default">Apply
-                  Job</a></div>
-              </div>
-            </div>
-          </article>
-        </div>
+        <ng-container *ngFor="let company of companies">
+          <app-company-box [company]="company"></app-company-box>
+        </ng-container>
       </div>
     </div>
   </div>
 </section>
 <div class="row">
   <div class="col-md-12 col-sm-12 view-all-jobs">
-    <div class="text-center"><a href="" class="btn btn-primary">View All Jobs</a></div>
+    <div class="text-center"><a routerLink="../companies" class="btn btn-primary">View All Companies</a></div>
   </div>
 </div>
 <div class="clearfix"></div>

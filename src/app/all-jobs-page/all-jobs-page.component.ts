@@ -25,7 +25,7 @@ export class AllJobsPageComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       this.searchJobFormGroup.patchValue({
         title: params.title,
-        type: params.type
+        type: params.type ?? 'All'
       });
 
       this.searchJob();
