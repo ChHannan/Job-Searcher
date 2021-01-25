@@ -23,4 +23,5 @@ export class CompanyService {
   getCompanyById(id): Observable<Company> {
     return this.httpClient.get<Company>(`${this.companyUrl}/${id}`);
   }
+
 }

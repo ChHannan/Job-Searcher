@@ -48,7 +48,11 @@
     <div class="container">
       <div class="row row-bottom">
         <h2 class="detail-title">Jobs</h2>
-        <p>{{company.about}}</p>
+        <ng-container *ngFor="let job of jobs">
+          <div class="col-md-4 col-sm-6">
+            <app-job-box [job]="job"></app-job-box>
+          </div>
+        </ng-container>
       </div>
     </div>
   </section>

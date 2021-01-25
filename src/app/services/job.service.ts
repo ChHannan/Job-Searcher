@@ -24,6 +24,10 @@ export class JobService {
     return this.httpClient.get<Job[]>(`${this.jobUrl}/?type=${type}&title=${title}`);
   }
 
+  getJobsByCompany(id): Observable<Job[]> {
+    return this.httpClient.get<Job[]>(`${this.jobUrl}/?company_id=${id}`);
+  }
+
   postJob(job: Job): Observable<any> {
     return this.httpClient.post(this.jobUrl, job);
   }
