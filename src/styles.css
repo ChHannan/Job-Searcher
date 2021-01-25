@@ -2149,9 +2149,10 @@ a.btn.btn-banner {
   color: #fff
 }
 
-.cursor{
+.cursor {
   cursor: pointer;
 }
+
 .banner.home-5 {
   background-size: cover;
   padding-top: 13%;
@@ -4143,6 +4144,7 @@ span.job-num {
 .detail-pannel-footer-btn a.footer-btn.blu-btn {
   background: #03a9f4
 }
+
 .detail-pannel-footer-btn a.footer-btn.red-btn {
   background: #dd2027
 }
@@ -7617,6 +7619,17 @@ ul.social-share li > a.be-share {
   }
 }
 
+.navbar-brand {
+  margin-top: 2px;
+  padding: 20px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .navbar-brand {
+    padding: 25px;
+  }
+}
+
 @media only screen and (min-width: 1024px) {
   .navbar .form-control {
     height: 42px
@@ -7723,10 +7736,6 @@ ul.social-share li > a.be-share {
     color: #555f69;
     font-size: 14.5px;
     font-weight: 400
-  }
-
-  nav.navbar .navbar-brand {
-    margin-top: 2px
   }
 
   nav.navbar .navbar-brand img.logo {
@@ -7951,7 +7960,7 @@ ul.social-share li > a.be-share {
   }
 
   nav.navbar .navbar-brand img.logo {
-    width: 140px
+    width: 140px;
   }
 
   nav.navbar.navbar-mobile ul.nav > li > a {
