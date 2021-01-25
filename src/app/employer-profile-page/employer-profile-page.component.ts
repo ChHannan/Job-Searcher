@@ -32,4 +32,8 @@ export class EmployerProfilePageComponent implements OnInit {
   updateAbout(): void {
     this.authService.update(this.user.id, this.aboutFormGroup.value);
   }
+
+  logout(): void {
+    this.authService.logout();
+  }
 }

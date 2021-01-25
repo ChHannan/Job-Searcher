@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { EmployerProfileRoutingModule } from './employer-profile-routing.module';
 import {EmployerProfilePageComponent} from '../employer-profile-page/employer-profile-page.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {SharedModule} from '../shared-module/shared.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     imports: [
         CommonModule,
         EmployerProfileRoutingModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        SharedModule
     ]
 })
 export class EmployerProfileModule { }

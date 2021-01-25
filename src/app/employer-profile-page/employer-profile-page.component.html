@@ -1,3 +1,4 @@
+<app-nav-bar [showAction]="false" style="padding-bottom: 20px"></app-nav-bar>
 <section class="inner-header-title" style="background-image:url('assets/banner-10.jpg');">
   <div class="container">
     <h1>Employer Profile</h1>
@@ -18,7 +19,7 @@
       <div class="detail pannel-footer">
         <div class="col-md-12 col-sm-12">
           <div class="detail-pannel-footer-btn pull-right">
-            <a class="footer-btn red-btn cursor">Logout</a>
+            <a class="footer-btn red-btn cursor" (click)="logout()">Logout</a>
           </div>
           <div class="detail-pannel-footer-btn pull-right">
             <a class="footer-btn grn-btn cursor">View Jobs</a>

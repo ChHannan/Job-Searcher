@@ -1,4 +1,5 @@
-<nav class="navbar navbar-default navbar-fixed navbar-transparent white bootsnav padd-bot-10">
+<nav class="navbar navbar-default navbar-fixed navbar-transparent white bootsnav padd-bot-10"
+     [ngStyle]="showAction ? null : {'padding-bottom': '20px'}">
   <div class="container">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"
             (click)="toggleCollapsed()">
@@ -11,7 +12,8 @@
     </div>
     <div class="navbar-collapse" id="navbar-menu" [ngClass]="{'collapse': collapsed}">
       <ul class="nav navbar-nav navbar-right">
-        <li class="left-br"><a class="signin cursor" (click)="navigate()">{{isLoggedIn ? 'View Profile' : 'Sign In Now'}}</a>
+        <li *ngIf="showAction" class="left-br"><a class="signin cursor"
+                                                  (click)="navigate()">{{isLoggedIn ? 'View Profile' : 'Sign In Now'}}</a>
         </li>
       </ul>
     </div>
