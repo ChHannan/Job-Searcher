@@ -4445,58 +4445,6 @@ ul.detail-footer-social li a i:hover {
   color: #fff
 }
 
-.third-progress .progressbar-title {
-  font-size: 14px;
-  color: #848484;
-  text-transform: capitalize
-}
-
-.third-progress .progress {
-  height: 4px;
-  overflow: visible;
-  background: #f0f0f0;
-  margin-bottom: 40px
-}
-
-.third-progress .progress .progress-bar {
-  position: relative;
-  animation: animate-positive 2s
-}
-
-.third-progress .progress .progress-icon {
-  width: 32px;
-  height: 32px;
-  line-height: 26px;
-  border-radius: 50%;
-  font-size: 14px;
-  position: absolute;
-  top: -15px;
-  right: 0;
-  background: #fff;
-  border-width: 3px;
-  border-style: solid
-}
-
-.third-progress .progress-value {
-  font-size: 14px;
-  color: #848484;
-  position: absolute;
-  top: 16px;
-  right: 0
-}
-
-@-webkit-keyframes animate-positive {
-  0% {
-    width: 0%
-  }
-}
-
-@keyframes animate-positive {
-  0% {
-    width: 0%
-  }
-}
-
 .panel-body .simple-tab p {
   color: #707c88;
   font-size: 15.4px;
