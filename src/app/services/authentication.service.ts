@@ -58,4 +58,11 @@ export class AuthenticationService {
       this.tokenSubject.next(null);
     });
   }
+
+  update(id, body): void {
+    this.httpClient.patch<User>(`${this.signUpUrl}/${id}/`, body).subscribe(response => {
+      this.currentUserSubject.next(response);
+      localStorage.setItem('currentUser', JSON.stringify(response));
+    });
+  }
 }
