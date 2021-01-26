@@ -34,11 +34,12 @@
         </div>
       </div>
     </div>
-    <div class="row no-padd">
+    <div class="row no-padd" *ngIf="user.type === 'candidate' || user.id === company.user.id">
       <div class="detail pannel-footer">
         <div class="col-md-12 col-sm-12">
           <div class="detail-pannel-footer-btn pull-right">
-            <a class="footer-btn grn-btn cursor" (click)="manageJobs()">Manage jobs</a>
+            <a class="footer-btn grn-btn cursor" *ngIf="user.type === 'employee'" (click)="manageJobs()">Manage jobs</a>
+            <a class="footer-btn grn-btn cursor" *ngIf="user.type === 'candidate'" (click)="browseJobs()">Browse jobs</a>
           </div>
         </div>
       </div>

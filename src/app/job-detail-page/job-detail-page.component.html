@@ -36,11 +36,14 @@
         </div>
       </div>
     </div>
-    <div class="row no-padd">
+    <div class="row no-padd" *ngIf="(!isEmployee && jobApplications !== undefined) || user.id === job.company.user.id">
       <div class="detail pannel-footer">
         <div class="col-md-12 col-sm-12">
-          <div *ngIf="!isEmployee" class="detail-pannel-footer-btn pull-right">
+          <div *ngIf="!isEmployee && jobApplications.length === 0" class="detail-pannel-footer-btn pull-right">
             <a class="footer-btn grn-btn cursor" (click)="navigateToApplyJob()">Quick Apply</a>
+          </div>
+          <div *ngIf="!isEmployee && jobApplications.length !== 0" class="detail-pannel-footer-btn pull-right">
+            <a class="footer-btn red-btn cursor" (click)="navigateToViewApplication()">View application</a>
           </div>
           <div *ngIf="isEmployee" class="detail-pannel-footer-btn pull-right">
             <a class="footer-btn red-btn cursor" (click)="deleteJob()">Delete Job</a>
@@ -60,7 +63,7 @@
   <div class="container">
     <div class="row row-bottom">
       <h2 class="detail-title">Job Responsibilities</h2>
-      <p>{{job.description }}</p>
+      <p>{{job.description}}</p>
     </div>
   </div>
 </section>
