@@ -3192,8 +3192,6 @@ ul.footer-navigation li {
   text-align: center;
   color: #fff;
   background: #53bb13;
-  background: -moz-radial-gradient(center, ellipse cover, #53bb13 0, #11b719 100%);
-  background: -webkit-radial-gradient(center, ellipse cover, #53bb13 0, #11b719 100%);
   background: radial-gradient(ellipse at center, #53bb13 0, #11b719 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#53bb13', endColorstr='#11b719', GradientType=1);
   background-size: cover
@@ -5498,57 +5496,6 @@ button.btn.btn-login {
   width: 15px;
   height: 15px;
   display: inline-block
-}
-
-.check-option {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  border-radius: 50%;
-  -webkit-transition: all .15s ease-out 0;
-  -moz-transition: all .15s ease-out 0;
-  transition: all .15s ease-out 0;
-  background: #eaeef3;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  outline: 0;
-  position: relative;
-  margin-right: .5rem
-}
-
-.check-option.full-time {
-  background: #03a504
-}
-
-.check-option.part-time {
-  background: #f6931e
-}
-
-.check-option.freelancer {
-  background: #26a9e1
-}
-
-.check-option.internship {
-  background: #d20001
-}
-
-.check-option.full-time:checked {
-  background: #03a504
-}
-
-.check-option.part-time:checked {
-  background: #f6931e
-}
-
-.check-option.freelancer:checked {
-  background: #26a9e1
-}
-
-.check-option.internship:checked {
-  background: #d20001
 }
 
 .check-option:checked::before {

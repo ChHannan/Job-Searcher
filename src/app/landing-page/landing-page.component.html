@@ -3,9 +3,9 @@
   <div class="container">
     <div class="simple-banner-caption">
       <div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1 banner-text">
-        <h3>We Are Available On</h3>
+        <h3>Welcome To </h3>
 
-        <h1>Job <span>Stock</span></h1>
+        <h1>X <span>Lancer</span></h1>
       </div>
     </div>
   </div>
@@ -14,21 +14,23 @@
 <section class="bottom-search-form">
   <div class="container">
     <form class="bt-form" [formGroup]="searchJobFormGroup">
-      <div class="col-md-4 col-sm-6">
-        <input type="text" class="form-control"
-               placeholder="Search job" formControlName="title">
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <select id="choose-type" class="form-control" formControlName="type">
-          <option>All</option>
-          <option>Full Time</option>
-          <option>Part Time</option>
-          <option>Internship</option>
-          <option>Contract</option>
-        </select>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <button type="submit" class="btn btn-success" (click)="searchJob()">Search Job</button>
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <input type="text" class="form-control"
+                 placeholder="Search job" formControlName="title">
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <select id="choose-type" class="form-control" formControlName="type">
+            <option>All</option>
+            <option>Full Time</option>
+            <option>Part Time</option>
+            <option>Internship</option>
+            <option>Contract</option>
+          </select>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <button type="submit" class="btn btn-primary" (click)="searchJob()">Search Job</button>
+        </div>
       </div>
     </form>
   </div>
