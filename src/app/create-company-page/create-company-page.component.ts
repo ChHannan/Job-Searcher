@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {CompanyService} from 'src/app/services/company.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
@@ -18,16 +18,16 @@ export class CreateCompanyPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.companyForm = new FormGroup({
-      name: new FormControl(''),
-      category: new FormControl(''),
-      description: new FormControl(''),
-      email: new FormControl(''),
-      location: new FormControl(''),
-      phone: new FormControl(''),
-      website: new FormControl(''),
-      logo: new FormControl(''),
-      employee_count: new FormControl(''),
-      about: new FormControl(''),
+      name: new FormControl('', [Validators.required]),
+      category: new FormControl('', [Validators.required]),
+      description: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required]),
+      location: new FormControl('', [Validators.required]),
+      phone: new FormControl('', [Validators.required]),
+      website: new FormControl('', [Validators.required]),
+      logo: new FormControl('', [Validators.required]),
+      employee_count: new FormControl('', [Validators.required]),
+      about: new FormControl('', [Validators.required]),
     });
 
     this.route.data.subscribe(response => {
@@ -40,14 +40,22 @@ export class CreateCompanyPageComponent implements OnInit {
   }
 
   createCompany(): void {
-    this.companyService.postCompany(this.companyForm.value).subscribe(data => {
-      this.router.navigate(['companies', 'manage']).then();
-    });
+    if (this.companyForm.valid) {
+      this.companyService.postCompany(this.companyForm.value).subscribe(data => {
+        this.router.navigate(['companies', 'manage']).then();
+      });
+    } else {
+      alert('All fields are mandatory');
+    }
   }
 
   updateCompany(): void {
-    this.companyService.updateCompany(this.id, this.companyForm.value).subscribe(response => {
-      this.router.navigate(['companies', 'manage']).then();
-    });
+    if (this.companyForm.valid) {
+      this.companyService.updateCompany(this.id, this.companyForm.value).subscribe(response => {
+        this.router.navigate(['companies', 'manage']).then();
+      });
+    } else {
+      alert('All fields are mandatory');
+    }
   }
 }

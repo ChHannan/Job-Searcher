@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {AuthenticationService} from 'src/app/services/authentication.service';
 
 @Component({
@@ -14,12 +14,22 @@ export class SignInPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.singInForm = new FormGroup({
-      email: new FormControl(''),
-      password: new FormControl(''),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required]),
     });
   }
 
   signInUser(): void {
-    this.authService.login(this.singInForm.value).subscribe();
+    if (this.singInForm.valid) {
+      this.authService.login(this.singInForm.value).subscribe(() => {}, error => {
+        alert('Please provide valid credentials');
+      });
+    } else {
+      if (this.singInForm.get('email').valid) {
+        alert('All fields are mandatory');
+      } else {
+        alert('Please provide valid email');
+      }
+    }
   }
 }

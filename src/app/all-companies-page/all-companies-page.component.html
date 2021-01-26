@@ -23,9 +23,11 @@
         </div>
       </div>
     </div>
-    <ng-container *ngFor="let company of companies">
-      <app-company-box [company]="company" [manage]="manage"></app-company-box>
-    </ng-container>
+    <div class="container">
+      <ng-container *ngFor="let company of companies">
+        <app-company-box [company]="company" [manage]="manage"></app-company-box>
+      </ng-container>
+    </div>
     <div class="row" *ngIf="manage">
       <div class="col-md-12 col-sm-12 view-all-jobs">
         <div class="text-center"><a routerLink="/company/create" class="btn btn-success">Create a company</a></div>

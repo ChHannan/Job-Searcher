@@ -6,10 +6,6 @@ body, section {
   background: #fff
 }
 
-a.btn.call-btn, p {
-  text-transform: capitalize
-}
-
 body, html, html body .full-width {
   width: 100%
 }

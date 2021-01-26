@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Company} from 'src/app/models/company';
 import {JobService} from 'src/app/services/job.service';
@@ -29,16 +29,16 @@ export class CreateJobComponent implements OnInit {
       });
     });
     this.jobForm = new FormGroup({
-      title: new FormControl(''),
-      description: new FormControl(''),
-      type: new FormControl('Full Time'),
-      location: new FormControl(''),
-      experience: new FormControl(''),
-      salary: new FormControl(''),
-      company_id: new FormControl(this.companies[0].id),
-      email: new FormControl(''),
-      phone: new FormControl(''),
-      contact_location: new FormControl(''),
+      title: new FormControl('', [Validators.required]),
+      description: new FormControl('', [Validators.required]),
+      type: new FormControl('Full Time', [Validators.required]),
+      location: new FormControl('', [Validators.required]),
+      experience: new FormControl('', [Validators.required]),
+      salary: new FormControl('', [Validators.required]),
+      company_id: new FormControl(this.companies[0].id, [Validators.required]),
+      email: new FormControl('', [Validators.required]),
+      phone: new FormControl('', [Validators.required]),
+      contact_location: new FormControl('', [Validators.required]),
     });
 
     this.route.queryParams.subscribe(params => {
@@ -58,14 +58,22 @@ export class CreateJobComponent implements OnInit {
   }
 
   createJob(): void {
-    this.jobService.postJob(this.jobForm.value).subscribe(data => {
-      this.router.navigate(['/', 'jobs', 'manage'], {queryParams: {company: this.companyId}}).then();
-    });
+    if (this.jobForm.valid) {
+      this.jobService.postJob(this.jobForm.value).subscribe(data => {
+        this.router.navigate(['/', 'jobs', 'manage'], {queryParams: {company: this.companyId}}).then();
+      });
+    } else {
+      alert('All fields are mandatory');
+    }
   }
 
   updateJob(): void {
-    this.jobService.updateJob(this.jobId, this.jobForm.value).subscribe(response => {
-      this.router.navigate(['/', 'job-detail', this.jobId]).then();
-    });
+    if (this.jobForm.valid) {
+      this.jobService.updateJob(this.jobId, this.jobForm.value).subscribe(response => {
+        this.router.navigate(['/', 'job-detail', this.jobId]).then();
+      });
+    } else {
+      alert('All fields are mandatory');
+    }
   }
 }
