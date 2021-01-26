@@ -35,11 +35,8 @@ export class NavBarComponent implements OnInit {
 
   navigate(): void {
     if (this.isLoggedIn) {
-      if (this.type === 'candidate') {
-        this.router.navigate(['/candidate-profile']).then();
-      } else {
-        this.router.navigate(['/employer-profile']).then();
-      }
+      this.router.navigate(['/profile']).then();
+
     } else {
       this.router.navigate(['/auth/login']).then();
     }

@@ -10,7 +10,8 @@ import {environment} from 'src/environments/environment';
 export class JobService {
   private jobUrl = `${environment.baseUrl}job`;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {
+  }
 
   getAllJobs(): Observable<Job[]> {
     return this.httpClient.get<Job[]>(this.jobUrl);
@@ -30,5 +31,13 @@ export class JobService {
 
   postJob(job: Job): Observable<any> {
     return this.httpClient.post(this.jobUrl, job);
+  }
+
+  updateJob(id, job): Observable<Job> {
+    return this.httpClient.patch<Job>(`${this.jobUrl}/${id}/`, job);
+  }
+
+  deleteJob(id): Observable<Job> {
+    return this.httpClient.delete<Job>(`${this.jobUrl}/${id}/`);
   }
 }

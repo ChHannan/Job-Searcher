@@ -4,8 +4,14 @@ import {CreateJobComponent} from 'src/app/create-job-page/create-job.component';
 
 const routes: Routes = [
   {
-    path: '', component: CreateJobComponent
-  }
+    path: '', redirectTo: 'create'
+  },
+  {
+    path: 'create', component: CreateJobComponent
+  },
+  {
+    path: 'edit/:id', component: CreateJobComponent, data: {edit: true}
+  },
 ];
 
 @NgModule({

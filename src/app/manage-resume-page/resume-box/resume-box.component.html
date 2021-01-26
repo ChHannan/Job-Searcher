@@ -1,18 +1,18 @@
-<article>
+<article (click)="navigateToJobApplicationDetail()">
   <div class="mng-resume">
     <div class="col-md-4 col-sm-4">
       <div class="mng-resume-name">
-        <h4>Alexander Weir <span class="cand-designation">(Web Developer)</span></h4>
+        <h4>{{jobApplication.applicant.name}} <span class="cand-designation">({{jobApplication.job.title}})</span></h4>
       </div>
     </div>
     <div class="col-md-offset-2 col-md-offset-2 col-md-4 col-sm-4">
       <div class="per-hour-rate">
-        <p><i class="fa fa-flask"></i> 2 Years Experience</p>
+        <p><i class="fa fa-flask"></i>{{jobApplication.experience}} Experience</p>
       </div>
     </div>
     <div class="col-md-2 col-sm-2">
       <div class="per-hour-rate">
-        <p><i class="fa fa-money"></i> $17/Hour</p>
+        <p><i class="fa fa-money"></i>Rs. {{jobApplication.salary}}</p>
       </div>
     </div>
   </div>

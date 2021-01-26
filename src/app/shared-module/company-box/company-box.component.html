@@ -20,6 +20,12 @@
       <div class="col-md-2 col-sm-2">
         <div class="brows-company-position">
           <p>{{company.employee_count}} Employees</p>
+          <div *ngIf="manage">
+            <div class="mng-company-action" style="display: flex; justify-content: flex-end;">
+              <a (click)="editCompany()" data-toggle="tooltip" title="" data-original-title="Edit" style="color: green; margin-right: 25px"><i class="fa fa-edit"></i></a>
+              <a (click)="deleteCompany()" data-toggle="tooltip" title="" data-original-title="Delete" style="color: red;"><i class="fa fa-trash-o"></i></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

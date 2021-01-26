@@ -31,7 +31,7 @@
             <li><i class="fa fa-map-marker"></i><span>{{job.contact_location}}</span></li>
             <li><i class="fa fa-envelope"></i><span>{{job.email}}</span></li>
             <li><i class="fa fa-phone"></i><span>{{job.phone}}</span></li>
-            <li><i class="fa fa-money"></i><span>Rs.{{job.salary}}</span></li>
+            <li><i class="fa fa-money"></i><span>Rs. {{job.salary}}</span></li>
           </ul>
         </div>
       </div>
@@ -39,8 +39,17 @@
     <div class="row no-padd">
       <div class="detail pannel-footer">
         <div class="col-md-12 col-sm-12">
-          <div class="detail-pannel-footer-btn pull-right">
-            <a class="footer-btn grn-btn cursor" (click)="navigate()">Quick Apply</a>
+          <div *ngIf="!isEmployee" class="detail-pannel-footer-btn pull-right">
+            <a class="footer-btn grn-btn cursor" (click)="navigateToApplyJob()">Quick Apply</a>
+          </div>
+          <div *ngIf="isEmployee" class="detail-pannel-footer-btn pull-right">
+            <a class="footer-btn red-btn cursor" (click)="deleteJob()">Delete Job</a>
+          </div>
+          <div *ngIf="isEmployee" class="detail-pannel-footer-btn pull-right">
+            <a class="footer-btn grn-btn cursor" (click)="editJob()">Edit Job</a>
+          </div>
+          <div *ngIf="isEmployee" class="detail-pannel-footer-btn pull-right">
+            <a class="footer-btn grn-btn cursor" (click)="navigateToViewApplications()">View Job Applications</a>
           </div>
         </div>
       </div>

@@ -34,6 +34,15 @@
         </div>
       </div>
     </div>
+    <div class="row no-padd">
+      <div class="detail pannel-footer">
+        <div class="col-md-12 col-sm-12">
+          <div class="detail-pannel-footer-btn pull-right">
+            <a class="footer-btn grn-btn cursor" (click)="manageJobs()">Manage jobs</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 <section class="full-detail-description full-detail">
@@ -53,6 +62,9 @@
           <app-job-box [job]="job"></app-job-box>
         </div>
       </ng-container>
+      <div *ngIf="jobs.length === 0">
+        <p>There are no job openings for this company. Check back later!</p>
+      </div>
     </div>
   </div>
 </section>

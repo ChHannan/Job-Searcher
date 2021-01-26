@@ -4,6 +4,7 @@ import {AllCompaniesPageComponent} from 'src/app/all-companies-page/all-companie
 import {SharedModule} from 'src/app/shared-module/shared.module';
 
 import {CompaniesRoutingModule} from './companies-routing.module';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import {CompaniesRoutingModule} from './companies-routing.module';
   imports: [
     CommonModule,
     CompaniesRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class CompaniesModule {

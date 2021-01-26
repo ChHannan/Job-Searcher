@@ -1,7 +1,7 @@
 <app-nav-bar></app-nav-bar>
 <section class="inner-header-title" style="background-image:url(assets/banner.jpg);">
   <div class="container">
-    <h1>Browse Jobs</h1>
+    <h1>{{manage ? 'Manage' : 'Browse'}} Jobs</h1>
   </div>
 </section>
 <div class="clearfix"></div>
@@ -37,6 +37,11 @@
           <app-job-box [job]="job"></app-job-box>
         </div>
       </ng-container>
+    </div>
+    <div class="row" *ngIf="manage">
+      <div class="col-md-12 col-sm-12 view-all-jobs">
+        <div class="text-center"><a (click)="navigateToCreateJob()" class="btn btn-success">Create a job</a></div>
+      </div>
     </div>
   </div>
 </section>

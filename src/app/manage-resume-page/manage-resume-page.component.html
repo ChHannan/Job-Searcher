@@ -1,17 +1,20 @@
 <app-nav-bar></app-nav-bar>
 <section class="inner-header-title" style="background-image:url('assets/banner.jpg');">
   <div class="container">
-    <h1>Manage Resume</h1>
+    <h1>Manage Job Applications</h1>
   </div>
 </section>
 <div class="clearfix"></div>
-<section class="manage-resume gray">
+<section class="manage-resume gray" style="min-height: 305px">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <ng-container *ngFor="let i of [].constructor(3)">
-          <app-resume-box></app-resume-box>
+        <ng-container *ngFor="let jobApplication of jobApplications">
+          <app-resume-box [jobApplication]="jobApplication"></app-resume-box>
         </ng-container>
+        <div *ngIf="jobApplications.length === 0">
+          <p>There are no job applications for this job. Check back later!</p>
+        </div>
       </div>
     </div>
   </div>

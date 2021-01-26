@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
-import {User} from 'src/app/models/user';
 import {CompanyService} from 'src/app/services/company.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-create-company-page',
@@ -10,8 +10,11 @@ import {CompanyService} from 'src/app/services/company.service';
 })
 export class CreateCompanyPageComponent implements OnInit {
   companyForm: FormGroup;
+  edit = false;
+  id: string;
 
-  constructor(private companyService: CompanyService) { }
+  constructor(private companyService: CompanyService, private route: ActivatedRoute, private router: Router) {
+  }
 
   ngOnInit(): void {
     this.companyForm = new FormGroup({
@@ -26,11 +29,25 @@ export class CreateCompanyPageComponent implements OnInit {
       employee_count: new FormControl(''),
       about: new FormControl(''),
     });
+
+    this.route.data.subscribe(response => {
+      this.edit = response.edit;
+    });
+    this.id = this.route.snapshot.paramMap.get('id');
+    this.companyService.getCompanyById(this.id).subscribe(response => {
+      this.companyForm.patchValue(response);
+    });
   }
 
   createCompany(): void {
     this.companyService.postCompany(this.companyForm.value).subscribe(data => {
-      console.log(data);
+      this.router.navigate(['companies', 'manage']).then();
+    });
+  }
+
+  updateCompany(): void {
+    this.companyService.updateCompany(this.id, this.companyForm.value).subscribe(response => {
+      this.router.navigate(['companies', 'manage']).then();
     });
   }
 }

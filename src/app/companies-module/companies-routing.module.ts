@@ -4,7 +4,12 @@ import {AllCompaniesPageComponent} from 'src/app/all-companies-page/all-companie
 
 const routes: Routes = [
   {
-    path: '', component:  AllCompaniesPageComponent,
+    path: '', component:  AllCompaniesPageComponent
+  },
+  {
+    path: 'manage', component: AllCompaniesPageComponent, data: {
+      manage: true
+    }
   }
 ];
 

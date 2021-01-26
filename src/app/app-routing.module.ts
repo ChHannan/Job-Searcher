@@ -17,7 +17,7 @@ const routes: Routes = [
     loadChildren: () => import ('./landing-module/landing-module.module').then(m => m.LandingModuleModule)
   },
   {
-    path: 'create-job',
+    path: 'job',
     loadChildren: () => import('./create-job-module/create-job.module').then(m => m.CreateJobModule), resolve: {
       companies: AllCompaniesResolverService
     }
@@ -42,11 +42,7 @@ const routes: Routes = [
     resolve: {company: SingleCompanyResolverService}
   },
   {
-    path: 'candidate-profile',
-    loadChildren: () => import('./candidate-profile-module/candidate-profile.module').then(m => m.CandidateProfileModule)
-  },
-  {
-    path: 'employer-profile',
+    path: 'profile',
     loadChildren: () => import('./employer-profile-module/employer-profile.module').then(m => m.EmployerProfileModule)
   },
   {
@@ -56,19 +52,19 @@ const routes: Routes = [
     }
   },
   {
-    path: 'apply-job/:id',
+    path: 'job-apply/:id',
     loadChildren: () => import('./apply-job-module/apply-job.module').then(m => m.ApplyJobModule)
   },
   {
-    path: 'create-company',
+    path: 'company',
     loadChildren: () => import('./create-company-module/create-company.module').then(m => m.CreateCompanyModule)
   },
   {
-    path: 'manage-resume',
+    path: 'job-applications/manage',
     loadChildren: () => import('./manage-resume-module/manage-resume.module').then(m => m.ManageResumeModule)
   },
   {
-    path: 'resume',
+    path: 'job-application/:id',
     loadChildren: () => import('./resume-module/resume.module').then(m => m.ResumeModule)
   },
   {
@@ -80,7 +76,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes),
+  imports: [RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'}),
   ],
   exports: [RouterModule]
 })

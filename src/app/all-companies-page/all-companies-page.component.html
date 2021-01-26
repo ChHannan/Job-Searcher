@@ -1,30 +1,36 @@
-<app-nav-bar></app-nav-bar>
-<section class="inner-header-title" style="background-image:url(assets/banner.jpg);">
-  <div class="container">
-    <h1>Browse Companies</h1>
-  </div>
-</section>
-<div class="clearfix"></div>
-<section class="browse-company">
-  <div class="container">
-    <div class="row extra-mrg">
-      <div class="wrap-search-filter">
-        <form>
-          <div class="col-md-4 col-sm-4">
-            <input type="text" class="form-control" placeholder="Keyword: Name, Tag">
-          </div>
-          <div class="col-md-3 col-sm-3">
-            <input type="text" class="form-control" placeholder="Location: City, State, Zip">
-          </div>
-          <div class="col-md-offset-3 col-sm-offset-3 col-md-2 col-sm-2">
-            <button type="submit" class="btn btn-success full-width">Filter</button>
-          </div>
-        </form>
+<div class="wrapper">
+  <app-nav-bar></app-nav-bar>
+  <section class="inner-header-title" style="background-image:url(assets/banner.jpg);">
+    <div class="container">
+      <h1>{{manage ? 'Manage' : 'Browse'}} Companies</h1>
+    </div>
+  </section>
+  <div class="clearfix"></div>
+  <section class="browse-company">
+    <div class="container">
+      <div class="row extra-mrg">
+        <div class="wrap-search-filter">
+          <form [formGroup]="searchCompanyFormGroup">
+            <div class="col-md-4 col-sm-4">
+              <input type="text" class="form-control" placeholder="Search for company" formControlName="title">
+            </div>
+            <div class="col-md-3 col-sm-3">
+            </div>
+            <div class="col-md-offset-3 col-sm-offset-3 col-md-2 col-sm-2">
+              <button type="submit" class="btn btn-success full-width" (click)="searchCompany()">Search</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
     <ng-container *ngFor="let company of companies">
-      <app-company-box [company]="company"></app-company-box>
+      <app-company-box [company]="company" [manage]="manage"></app-company-box>
     </ng-container>
-  </div>
-</section>
+    <div class="row" *ngIf="manage">
+      <div class="col-md-12 col-sm-12 view-all-jobs">
+        <div class="text-center"><a routerLink="/company/create" class="btn btn-success">Create a company</a></div>
+      </div>
+    </div>
+  </section>
+</div>
 <app-footer></app-footer>

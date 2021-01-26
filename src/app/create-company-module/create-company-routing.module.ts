@@ -4,7 +4,13 @@ import {CreateCompanyPageComponent} from '../create-company-page/create-company-
 
 const routes: Routes = [
   {
-    path: '', component: CreateCompanyPageComponent
+    path: '', redirectTo: 'create'
+  },
+  {
+    path: 'create', component: CreateCompanyPageComponent
+  },
+  {
+    path: 'edit/:id', component: CreateCompanyPageComponent, data: {edit: true}
   }
 ];
 

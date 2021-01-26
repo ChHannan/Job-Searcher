@@ -1,23 +1,21 @@
 <app-nav-bar></app-nav-bar>
 <section class="inner-header-title" style="background-image:url(assets/banner.jpg);">
   <div class="container">
-    <h1>Resume Detail</h1>
+    <h1>Job Application Detail</h1>
   </div>
 </section>
 <div class="clearfix"></div>
-<section class="detail-desc">
+<section class="detail-desc" *ngIf="jobApplication !== undefined">
   <div class="container white-shadow">
     <div class="row bottom-mrg mrg-0 padd-top-40">
       <div class="col-md-8 col-sm-8">
         <div class="detail-desc-caption">
-          <h4>Daniel Dax</h4>
-          <span class="designation">Web Developer</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
+          <h4>{{jobApplication.applicant.name}}</h4>
+          <span class="designation">{{jobApplication.job.title}}</span>
+          <p>{{jobApplication.applicant.about}}</p>
           <ul>
-            <li><i class="fa fa-briefcase"></i><span>Internship</span></li>
-            <li><i class="fa fa-flask"></i><span>2 Year Experience</span></li>
+            <li><i class="fa fa-briefcase"></i><span>{{jobApplication.job.type}}</span></li>
+            <li><i class="fa fa-flask"></i><span>{{jobApplication.experience}} Experience</span></li>
           </ul>
         </div>
       </div>
@@ -25,8 +23,8 @@
         <div class="get-touch">
           <h4>Get in Touch</h4>
           <ul>
-            <li><i class="fa fa-envelope"></i><span>danieldax704@gmail.com</span></li>
-            <li><i class="fa fa-money"></i><span>$52/Hour</span></li>
+            <li><i class="fa fa-envelope"></i><span>{{jobApplication.applicant.email}}</span></li>
+            <li><i class="fa fa-money"></i><span>Rs. {{jobApplication.salary}}</span></li>
           </ul>
         </div>
       </div>
@@ -35,25 +33,22 @@
       <div class="detail pannel-footer">
         <div class="col-md-12 col-sm-12">
           <div class="detail-pannel-footer-btn pull-right">
-            <a class="footer-btn grn-btn" title="">Hire Now</a>
+            <a (click)="hireDialog()" class="footer-btn grn-btn" title="">Hire Now</a>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="full-detail-description full-detail">
+<section class="full-detail-description full-detail" *ngIf="jobApplication !== undefined">
   <div class="container">
     <div class="row row-bottom mrg-0">
       <h2 class="detail-title">Cover Letter</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat.</p>
+      <p>{{jobApplication.cover_letter}}</p>
     </div>
-    <div class="row row-bottom mrg-0">
+    <div class="row row-bottom mrg-0" *ngIf="jobApplication !== undefined">
       <h2 class="detail-title">Extra Information</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.</p>
+      <p>{{jobApplication.info}}</p>
     </div>
   </div>
 </section>

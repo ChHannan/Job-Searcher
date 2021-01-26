@@ -1,7 +1,7 @@
 <app-nav-bar [showAction]="false" style="padding-bottom: 20px"></app-nav-bar>
 <section class="inner-header-title" style="background-image:url('assets/banner.jpg');">
   <div class="container">
-    <h1>Employer Profile</h1>
+    <h1>{{user.type === 'employee' ? 'Employer' : 'Candidate'}} Profile</h1>
   </div>
 </section>
 <div class="clearfix"></div>
@@ -21,11 +21,11 @@
           <div class="detail-pannel-footer-btn pull-right">
             <a class="footer-btn red-btn cursor" (click)="logout()">Logout</a>
           </div>
-          <div class="detail-pannel-footer-btn pull-right">
-            <a class="footer-btn grn-btn cursor">View Jobs</a>
+          <div *ngIf="user.type === 'candidate'" class="detail-pannel-footer-btn pull-right">
+            <a class="footer-btn grn-btn cursor" routerLink="/jobs">View Jobs</a>
           </div>
-          <div class="detail-pannel-footer-btn pull-right">
-            <a class="footer-btn grn-btn cursor">View Companies</a>
+          <div *ngIf="user.type === 'employee'" class="detail-pannel-footer-btn pull-right">
+            <a class="footer-btn grn-btn cursor" routerLink="../companies/manage">Manage Companies</a>
           </div>
         </div>
       </div>

@@ -10,7 +10,8 @@ import {environment} from 'src/environments/environment';
 export class CompanyService {
   private companyUrl = `${environment.baseUrl}company`;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {
+  }
 
   getAllCompanies(): Observable<Company[]> {
     return this.httpClient.get<Company[]>(this.companyUrl);
@@ -24,4 +25,11 @@ export class CompanyService {
     return this.httpClient.get<Company>(`${this.companyUrl}/${id}`);
   }
 
+  updateCompany(id, company: Company): Observable<Company> {
+    return this.httpClient.patch<Company>(`${this.companyUrl}/${id}/`, company);
+  }
+
+  deleteCompany(id): Observable<Company> {
+    return this.httpClient.delete<Company>(`${this.companyUrl}/${id}/`);
+  }
 }

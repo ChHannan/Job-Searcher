@@ -1,7 +1,7 @@
 <app-nav-bar></app-nav-bar>
 <section class="inner-header-title blank">
   <div class="container">
-    <h1>Create Job</h1>
+    <h1>{{this.edit ? 'Edit' : 'Create'}} Job</h1>
   </div>
 </section>
 <div class="clearfix"></div>
@@ -63,8 +63,8 @@
             <div class="input-group">
               <span class="input-group-addon"><i class="fa fa-flag"></i></span>
               <select class="form-control input-lg" formControlName="company_id">
-                <ng-container *ngFor="let company of companies; let first = first">
-                  <option [selected]="first" value="{{company.id}}">{{company.name}}</option>
+                <ng-container *ngFor="let company of companies;">
+                  <option [selected]="jobForm.controls.company_id.value == company.id" value="{{company.id}}">{{company.name}}</option>
                 </ng-container>
               </select>
             </div>
@@ -89,7 +89,9 @@
           </div>
         </form>
         <div class="col-md-12 col-sm-12 padd-top-20">
-          <button class="btn btn-success btn-primary small-btn" type="button" (click)="createJob()">Post Your Job
+          <button *ngIf="!edit" class="btn btn-success btn-primary small-btn" type="button" (click)="createJob()">Post Your Job
+          </button>
+          <button *ngIf="edit" class="btn btn-success btn-primary small-btn" type="button" (click)="updateJob()">Update Your Job
           </button>
         </div>
       </div>
